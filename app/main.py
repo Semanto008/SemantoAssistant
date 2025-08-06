@@ -66,7 +66,13 @@ async def startup_event():
 async def root():
     """Root endpoint for basic health check or welcome message."""
     return {"message": "Welcome to Semanto's AI Assistant API. Use /docs for API documentation."}
-
+@app.options("/ask")
+async def options_ask():
+    """Handles CORS preflight requests for the /ask endpoint."""
+    # FastAPI's CORSMiddleware will add the necessary Access-Control-Allow-* headers.
+    # This simple return is enough to give a 200 OK.
+    return {"message": "CORS preflight successful"}
+    
 @app.post("/ask")
 async def ask_assistant(query: UserQuery):
     """
