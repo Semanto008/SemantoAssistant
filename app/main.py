@@ -29,7 +29,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",  # For local frontend development (e.g., React/Vue dev server)
         "http://127.0.0.1:3000",  # For local frontend development
-        "https://2fdda79f-82b1-4966-8199-b58ab24fe71e.lovableproject.com", # Your deployed Lovable frontend
+        "https://2fdda79f-82b1-49b6-8199-b58ab24fe71e.lovableproject.com", # Your deployed Lovable frontend
         "https://semantoassistant.onrender.com" # Allow requests from its own domain (if needed for testing)
     ],
     allow_credentials=True,
