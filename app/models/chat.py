@@ -1,15 +1,8 @@
-# my_rag_project/app/models/chat.py
-
 from pydantic import BaseModel
 
 class UserQuery(BaseModel):
     """
-    Pydantic model for incoming user questions.
+    Pydantic model for incoming user questions via the API.
     """
-    session_id: str
-    question: str
-
-# You might add a response model if your response is more complex
-# class AssistantResponse(BaseModel):
-#     answer: str
-#     # Optional: source_documents: List[Dict]
+    session_id: str # Unique identifier for the conversation session
+    question: str   # The actual question from the user
