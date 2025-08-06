@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+PyPDF2
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+faiss-cpu
