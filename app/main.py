@@ -26,14 +26,9 @@ app = FastAPI(
 # IMPORTANT: Adjust allow_origins in production to your specific frontend domains!
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # For local frontend development (e.g., React/Vue dev server)
-        "http://127.0.0.1:3000",  # For local frontend development
-        "https://2fdda79f-82b1-49b6-8199-b58ab24fe71e.lovableproject.com", # Your deployed Lovable frontend
-        "https://semantoassistant.onrender.com" # Allow requests from its own domain (if needed for testing)
-    ],
+    allow_origins=[ "https://2fdda79f-82b1-49b6-8199-b58ab24fe71e.lovableproject.com"],
     allow_credentials=True,
-    allow_methods=["*"], # Allow all HTTP methods (POST, GET, OPTIONS, etc.)
+    allow_methods=["GET","POST","PUT","DELETE"], # Allow all HTTP methods (POST, GET, OPTIONS, etc.)
     allow_headers=["*"], # Allow all headers
 )
 
