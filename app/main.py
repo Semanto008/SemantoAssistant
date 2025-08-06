@@ -26,7 +26,7 @@ app = FastAPI(
 # IMPORTANT: Adjust allow_origins in production to your specific frontend domains!
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://bdc97ab2-f6fe-43ff-8421-fdbe7ad9b461.lovableproject.com"],
     allow_credentials=True,
     allow_methods=["*"], # Allow all HTTP methods (POST, GET, OPTIONS, etc.)
     allow_headers=["*"], # Allow all headers
