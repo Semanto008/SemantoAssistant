@@ -14,23 +14,6 @@ FastAPI Backend: Exposes a single /ask API endpoint for a frontend to communicat
 
 Modular Architecture: The codebase is structured for clarity and maintainability, separating concerns into different modules (config, utils, chains, models).
 
-Project Structure
-my_rag_project/
-├── app/
-│   ├── __init__.py          
-│   ├── main.py              # FastAPI app entry point
-│   ├── config.py            # Configuration variables
-│   ├── utils.py             # Utility functions
-│   ├── chains/              
-│   │   ├── __init__.py      
-│   │   └── rag_chain.py     # LangChain logic
-│   └── models/              
-│       ├── __init__.py      
-│       └── chat.py          # Pydantic models
-├── faiss_index/             # Pre-built FAISS index
-├── .env                     # Environment variables (private)
-├── requirements.txt         # Project dependencies
-└── SemantoGhoshGenAIResume.pdf # Source PDF file
 
 How to Run Locally
 Follow these steps to get a local copy of the project up and running.
