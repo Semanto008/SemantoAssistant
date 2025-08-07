@@ -26,8 +26,8 @@ app = FastAPI(
 # IMPORTANT: Adjust allow_origins in production to your specific frontend domains!
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://bdc97ab2-f6fe-43ff-8421-fdbe7ad9b461.lovableproject.com"],
-    allow_credentials=False,
+    allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"], # Allow all HTTP methods (POST, GET, OPTIONS, etc.)
     allow_headers=["*"], # Allow all headers
 )
@@ -66,12 +66,12 @@ async def startup_event():
 async def root():
     """Root endpoint for basic health check or welcome message."""
     return {"message": "Welcome to Semanto's AI Assistant API. Use /docs for API documentation."}
-@app.options("/ask")
-async def options_ask():
-    """Handles CORS preflight requests for the /ask endpoint."""
-    # FastAPI's CORSMiddleware will add the necessary Access-Control-Allow-* headers.
-    # This simple return is enough to give a 200 OK.
-    return {"message": "CORS preflight successful"}
+# @app.options("/ask")
+# async def options_ask():
+#     """Handles CORS preflight requests for the /ask endpoint."""
+#     # FastAPI's CORSMiddleware will add the necessary Access-Control-Allow-* headers.
+#     # This simple return is enough to give a 200 OK.
+#     return {"message": "CORS preflight successful"}
     
 @app.post("/ask")
 async def ask_assistant(query: UserQuery):
