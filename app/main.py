@@ -15,11 +15,11 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 
 
 # --- Initialize FastAPI app ---
-app = FastAPI(
-    title="Semanto's AI Assistant",
-    description="An AI assistant for answering questions based on Semanto Ghosh's professional profile.",
-    version="1.0.0",
-)
+app = FastAPI()
+    # title="Semanto's AI Assistant",
+    # description="An AI assistant for answering questions based on Semanto Ghosh's professional profile.",
+    # version="1.0.0",
+
 
 # --- CORS Middleware ---
 # Configure CORS to allow communication from your frontend
